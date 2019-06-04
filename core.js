@@ -5,14 +5,22 @@ function fioToName(fioString) {
 	return lastName+" "+ firstName;
 }
 
+<<<<<<< HEAD
+=======
+// преобразуйте массив чисел так, чтобы в нем остались только
+// уникальные элементы
+function filterUnique(arr) {
+	let set = new Set(arr);
+	return [...set];
+}
+
+>>>>>>> test
 // Задача: разница зарплат
 // в функцию приходит массив из n зарплат сотрудников фирмы
 // ваша задача определить, во сколько раз зарплата самого высокооплачиваемого
 // сотрудника превышает зарплату самого низкооплачиваемого
-// присмотритесь к методу .reduce
 function calculateSalaryDifference(arr) {
 	return Math.max(...arr)/Math.min(...arr);
-	// Я присмотрелась к .reduce, честно. Но таким способом мне нравится больше =)
 }
 
 module.exports = {
