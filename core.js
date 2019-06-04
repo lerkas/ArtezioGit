@@ -5,14 +5,6 @@ function fioToName(fioString) {
 	return lastName+" "+ firstName;
 }
 
-// преобразуйте массив чисел так, чтобы в нем остались только
-// уникальные элементы
-// присмотритесь к коллекции "Set"
-function filterUnique(arr) {
-	let set = new Set(arr);
-	return [...set];
-}
-
 // Задача: разница зарплат
 // в функцию приходит массив из n зарплат сотрудников фирмы
 // ваша задача определить, во сколько раз зарплата самого высокооплачиваемого
@@ -25,6 +17,5 @@ function calculateSalaryDifference(arr) {
 
 module.exports = {
     fioToName,
-    filterUnique,
     calculateSalaryDifference,
 };
