@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3.0 (Linux)"/>
+	<meta name="created" content="2019-06-15T21:41:46.062989715"/>
+	<meta name="changed" content="2019-06-16T20:22:53.643665909"/>
+	<style type="text/css">
+		@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 115% }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="ru-RU" dir="ltr">
+<p align="center" style="margin-bottom: 0cm; line-height: 100%">Система
+управления запросами в IT-отдел</p>
+<p align="center" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Система
+позволяет сотрудникам компании
+формировать запрос в IT-отдел, а системным
+администраторам и/или инженерам
+оперативно реагировать на них.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Предлагается
+использовать многоуровневую архитектуру.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Подключение
+юзеров к системе реализовано через
+web-интерфейс двух типов.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">В
+локальной сети компании поднимается
+web-сервер (например Apache) + сервер приложений
++ база данных (например PostgreSQL).</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Авторизация
+пользователей происходит посредством
+связки  web-сервер + служба каталогов сети
+организации (например Apache + MS Active
+Directory).</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Таким
+образом, если юзер уже залогинился в
+локальной сети организации, нет нужды
+второй раз вводить логин/пароль. Так же
+из AD берутся права доступа и определяется
+тип юзера.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Сотрудники
+компании формируют свой запрос через
+web-интерфейс первого типа (юзер без прав
+администрирования).</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Запросы
+перенаправляются web-сервером на сервер
+приложений, где крутится некий(е)
+скрипт(ы) на JS и API, посредством которых
+запросы далее оседают в sql-базе данных.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Сотрудники
+IT-отдела через web-интерфейс второго типа
+(с правами администрирования), загружая
+запросы из базы данных, формируют из
+них очередь на выполнение.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">После
+исполнения запроса, администраторы
+посредством web-интерфейса второго типа
+присваивают ему статус «выполнено»,
+что влечёт за собой изменение записи в
+базе данных.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Сотруднику,
+инициировавшему запрос, приходит
+оповещение о выполнении.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Отказоустойчивость
+достигается путём бэкапа кластера через
+установленные промежутки времени.</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Безопасность
+достигается путём интеграции с AD, как
+следствие — полностью соответствует
+групповым политикам доступа (<font color="#999999">при
+условии, что всё грамотно настроено,
+конечно</font>).</p>
+<p align="justify" style="margin-bottom: 0cm; line-height: 100%">Производительность
+— для работы системы со стороны
+пользователя необходим только браузер,
+потому есть возможность использования
+как тонких клиентов, переносимый
+устройств, так и традиционных ПК.</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>
