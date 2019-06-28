@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  background: #edeef0;
+}
+
+body {
+  color: #697f8e;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.item {
+  text-align: center;
+  width: calc(100% - 30px);
+  margin: 15px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  text-align: left;
+  color: #285473;
+  padding: 5px;
+}
+
+ul li {
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  text-align: left;
+  padding: 5px;
+  list-style: none;
+}
+
+.experience ul li {
+  list-style-type: disc;
+}
+
+.contacts ul li:hover {
+  cursor: pointer;
+}
+
+a {
+  color: #697f8e;
+}
