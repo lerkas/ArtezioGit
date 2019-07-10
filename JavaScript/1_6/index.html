@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задания 1 - 6</title>
+</head>
+
+<body>
+    <p>Задания 1 - 6</p>
+    X1 <input class="number" id="x1" type="number"><br>
+    X2 <input class="number" id="x2" type="number"><br><br>
+    <input type="radio" value="simpleSum" id="simpleSum" name="operation" checked>Сумма чисел Х1 и Х2<br>
+    <input type="radio" value="sum" id="sum" name="operation">Сумма всех чисел от Х1 до Х2<br>
+    <input type="radio" value="product" id="product" name="operation">Произведение всех чисел от Х1 до Х2<br>
+    <input type="radio" value="primeNumber" id="primeNumber" name="operation">Все простые числа от Х1 до Х2<br><br>
+    <input type="button" value="run" onclick="buttonClick()">
+    <input type="button" value="Очистить" onclick="toClear()">
+    <br><br>
+    <div id="result"></div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
