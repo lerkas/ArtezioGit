@@ -11,8 +11,9 @@ function buttonClick() {
         }
         if (radio[i].checked && radio[i].value == document.getElementById('product').value) {
             product();
-        } else {
-            console.log('тут будут простые числа');
+        }
+        if (radio[i].checked && radio[i].value == document.getElementById('primeNumber').value) {
+            primeNumber();
         }
     }
 }
@@ -57,6 +58,38 @@ function product() {
             result *= a;
         }
         document.getElementById('result').innerHTML = 'Произведение всех чисел от X1 до X2 = ' + result;
+    }
+}
+
+function primeNumber() {
+    let x1 = document.getElementById('x1').value;
+    let x2 = document.getElementById('x2').value;
+    if (x1.length == 0 || x2.length == 0) {
+        alert('Поля X1 и X2 не могут быть пусты.\nВведите числа.');
+    } else {
+        let result = [];
+        let a = parseInt(x1);
+        let b = parseInt(x2);
+
+        if (a > b) {
+            let tmp = a;
+            a = b;
+            b = tmp;
+        }
+
+        nextPrime:
+            for (a; a <= b; a++) {
+                if (a <= 0 || a == 1) {
+                    continue;
+                }
+                for (let j = 2; j < a; j++) {
+                    if (a % j == 0) {
+                        continue nextPrime;
+                    }
+                }
+                result.push(a);
+            }
+        document.getElementById('result').innerHTML = 'Все простые числа от X1 до X2: ' + result.join();
     }
 }
 
